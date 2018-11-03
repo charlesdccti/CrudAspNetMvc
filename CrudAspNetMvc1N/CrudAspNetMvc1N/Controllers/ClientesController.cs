@@ -17,7 +17,7 @@ namespace CrudAspNetMvc1N.Controllers
         // GET: Clientes
         public ActionResult Index()
         {
-            var clientes = db.Clientes.Include(c => c.Consultor);
+            var clientes = db.Clientes.Include(c => c.Consultor); // Tecnica EAGER LOAD
             return View(clientes.ToList());
         }
 
